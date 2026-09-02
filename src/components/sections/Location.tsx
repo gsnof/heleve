@@ -36,13 +36,13 @@ export function Location() {
                       Endereço
                     </h4>
                     <p className="text-sm text-slate-200 mt-1 font-light leading-relaxed">
-                      {CLINIC_INFO.address.street}, {CLINIC_INFO.address.number}
+                      {CLINIC_INFO.address.street}
                     </p>
                     <p className="text-xs text-slate-400">
                       {CLINIC_INFO.address.neighborhood} • {CLINIC_INFO.address.city} - {CLINIC_INFO.address.state}
                     </p>
                     <p className="text-xs text-slate-400">
-                      CEP: {CLINIC_INFO.address.zipCode}
+                      CEP: {CLINIC_INFO.address.cep}
                     </p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export function Location() {
                       Horário de Funcionamento
                     </h4>
                     <p className="text-xs text-slate-200 mt-1 font-light">
-                      {CLINIC_INFO.openingHours.weekdays}
+                      {CLINIC_INFO.operatingHours.weekdays}
                     </p>
                     <p className="text-[11px] text-slate-400 mt-0.5">
                       Atendimento mediante agendamento prévio
@@ -87,7 +87,7 @@ export function Location() {
               {/* Action Buttons */}
               <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row gap-3">
                 <a
-                  href={CLINIC_INFO.address.mapsUrl}
+                  href={CLINIC_INFO.address.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider bg-gold-400 hover:bg-gold-300 text-obsidian-950 transition-colors shadow-md"

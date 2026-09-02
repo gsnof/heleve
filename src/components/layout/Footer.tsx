@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { CLINIC_INFO, SPECIALTIES } from "@/data/clinicData";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { Instagram, Phone, MessageCircle, MapPin, Clock, Shield } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-full overflow-hidden border border-gold-400/40 p-0.5 bg-obsidian-900 flex-shrink-0">
                 <img
-                  src="/images/logo-heleve.jpg"
+                  src={asset("/images/logo-heleve.jpg")}
                   alt="Logo Clínica Heleve"
                   className="w-full h-full object-cover rounded-full"
                 />

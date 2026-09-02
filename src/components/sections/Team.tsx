@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { ShieldCheck, CalendarCheck, MessageCircle } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 export function Team() {
   const teamWaUrl = getWhatsAppUrl(
@@ -29,7 +30,7 @@ export function Team() {
 
               <div className="relative rounded-2xl overflow-hidden border border-gold-400/30 bg-obsidian-950 shadow-2xl">
                 <img
-                  src="/images/corpo-clinico-consultorio.jpg"
+                  src={asset("/images/corpo-clinico-consultorio.jpg")}
                   alt="Corpo Clínico da Clínica Heleve no consultório"
                   className="w-full h-[450px] sm:h-[520px] object-cover object-top"
                 />

@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckCircle2, Award, HeartHandshake, ShieldCheck } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 export function About() {
   return (
@@ -18,7 +19,7 @@ export function About() {
 
               <div className="rounded-2xl overflow-hidden border border-gold-400/25 bg-obsidian-950 shadow-2xl">
                 <img
-                  src="/images/corpo-clinico-recepcao.jpg"
+                  src={asset("/images/corpo-clinico-recepcao.jpg")}
                   alt="Corpo Clínico da Clínica Heleve na recepção da clínica"
                   className="w-full h-[460px] sm:h-[520px] object-cover object-top"
                 />

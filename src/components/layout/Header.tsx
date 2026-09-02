@@ -16,6 +16,8 @@ const NAV_LINKS = [
   { label: "Localização", href: "#localizacao" },
 ];
 
+import { asset } from "@/lib/assets";
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,7 +54,7 @@ export function Header() {
           >
             <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-gold-400/40 p-0.5 bg-obsidian-900 group-hover:border-gold-300 transition-colors flex-shrink-0">
               <img
-                src="/images/logo-heleve.jpg"
+                src={asset("/images/logo-heleve.jpg")}
                 alt="Logo Clínica Heleve"
                 className="w-full h-full object-cover rounded-full"
               />
@@ -147,7 +149,7 @@ export function Header() {
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full overflow-hidden border border-gold-400/40">
                     <img
-                      src="/images/logo-heleve.jpg"
+                      src={asset("/images/logo-heleve.jpg")}
                       alt="Clínica Heleve"
                       className="w-full h-full object-cover"
                     />

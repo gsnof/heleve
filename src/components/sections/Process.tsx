@@ -22,12 +22,12 @@ export function Process() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PROCESS_STEPS.map((step, index) => (
             <div
-              key={step.step}
+              key={step.title}
               className="relative p-6 rounded-2xl bg-obsidian-900/70 border border-gold-400/15 flex flex-col justify-between group hover:border-gold-400/40 transition-colors"
             >
               <div>
                 <span className="font-serif text-3xl sm:text-4xl font-light text-gold-400/40 group-hover:text-gold-400 transition-colors">
-                  {step.step}
+                  {step.number || String(index + 1).padStart(2, "0")}
                 </span>
 
                 <h3 className="font-serif text-lg font-medium text-warmWhite mt-4 mb-2">

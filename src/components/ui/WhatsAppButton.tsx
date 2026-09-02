@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { CLINIC_INFO } from "@/data/clinicData";
+import { asset } from "@/lib/assets";
 import clsx from "clsx";
 
 interface WhatsAppFloatingProps {
@@ -50,7 +51,7 @@ export function WhatsAppFloating({ message }: WhatsAppFloatingProps) {
             <div className="flex items-center gap-2.5">
               <div className="relative w-9 h-9 rounded-full overflow-hidden border border-gold-400/40">
                 <img
-                  src="/images/logo-heleve.jpg"
+                  src={asset("/images/logo-heleve.jpg")}
                   alt="Clínica Heleve"
                   className="w-full h-full object-cover"
                 />

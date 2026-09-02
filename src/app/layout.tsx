@@ -103,10 +103,10 @@ const jsonLd = {
       image: "https://heleveclinica.com.br/images/corpo-clinico-consultorio.jpg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: `${CLINIC_INFO.address.street}, ${CLINIC_INFO.address.number}`,
+        streetAddress: CLINIC_INFO.address.street,
         addressLocality: CLINIC_INFO.address.city,
         addressRegion: CLINIC_INFO.address.state,
-        postalCode: CLINIC_INFO.address.zipCode,
+        postalCode: CLINIC_INFO.address.cep,
         addressCountry: "BR",
       },
       geo: {
@@ -128,7 +128,7 @@ const jsonLd = {
           closes: "18:00",
         },
       ],
-      sameAs: [CLINIC_INFO.instagramUrl],
+      sameAs: [CLINIC_INFO.instagram],
       medicalSpecialty: [
         "https://health-lifesci.schema.org/Dentistry",
         "https://health-lifesci.schema.org/SportsMedicine",
@@ -142,10 +142,10 @@ const jsonLd = {
       telephone: CLINIC_INFO.phone,
       address: {
         "@type": "PostalAddress",
-        streetAddress: `${CLINIC_INFO.address.street}, ${CLINIC_INFO.address.number}`,
+        streetAddress: CLINIC_INFO.address.street,
         addressLocality: CLINIC_INFO.address.city,
         addressRegion: CLINIC_INFO.address.state,
-        postalCode: CLINIC_INFO.address.zipCode,
+        postalCode: CLINIC_INFO.address.cep,
         addressCountry: "BR",
       },
     },

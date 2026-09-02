@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { MessageCircle, ArrowRight, ShieldCheck, Clock, MapPin, Sparkles } from "lucide-react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { asset } from "@/lib/assets";
 
 export function Hero() {
   const heroWhatsAppUrl = getWhatsAppUrl(
@@ -105,7 +106,7 @@ export function Hero() {
               {/* Main Photo Card */}
               <div className="relative rounded-2xl overflow-hidden border border-gold-400/30 bg-obsidian-900 shadow-2xl shadow-black/80">
                 <img
-                  src="/images/corpo-clinico-consultorio.jpg"
+                  src={asset("/images/corpo-clinico-consultorio.jpg")}
                   alt="Especialistas da Clínica Heleve no consultório"
                   className="w-full h-[420px] sm:h-[480px] object-cover object-top filter brightness-[0.98] contrast-[1.03]"
                 />
@@ -118,7 +119,7 @@ export function Hero() {
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-400/60 p-0.5 bg-obsidian-900 flex-shrink-0">
                       <img
-                        src="/images/logo-heleve.jpg"
+                        src={asset("/images/logo-heleve.jpg")}
                         alt="Logo Heleve"
                         className="w-full h-full object-cover rounded-full"
                       />
