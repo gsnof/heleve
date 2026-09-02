@@ -84,10 +84,12 @@ export function Header() {
 
           {/* Desktop Header Actions (Separated Phone & WhatsApp CTA) */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0">
-            {/* Phone Number with Clear Separator */}
+            {/* Phone Number with Clear Separator (Direct Phone Call) */}
             <a
-              href={`tel:${CLINIC_INFO.phone.replace(/[^0-9]/g, "")}`}
+              href={`tel:${CLINIC_INFO.phoneFormatted}`}
               className="flex items-center gap-2 pl-4 xl:pl-6 border-l border-white/15 text-xs text-slate-300 hover:text-gold-300 transition-colors font-medium whitespace-nowrap"
+              title="Ligar para o Telefone Fixo: (32) 3518-5253"
+              aria-label="Ligar para o telefone fixo (32) 3518-5253"
             >
               <Phone className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
               <span>{CLINIC_INFO.phone}</span>

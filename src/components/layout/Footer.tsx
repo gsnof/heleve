@@ -145,7 +145,27 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                <span>{CLINIC_INFO.phone} / {CLINIC_INFO.whatsapp}</span>
+                <span>
+                  Fixo:{" "}
+                  <a
+                    href={`tel:${CLINIC_INFO.phoneFormatted}`}
+                    className="text-slate-300 hover:text-gold-300 transition-colors"
+                    title="Ligar para o Telefone Fixo"
+                  >
+                    {CLINIC_INFO.phone}
+                  </a>
+                  {" • "}
+                  WhatsApp:{" "}
+                  <a
+                    href={footerWaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                    title="Abrir WhatsApp"
+                  >
+                    {CLINIC_INFO.whatsapp}
+                  </a>
+                </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 text-gold-400 flex-shrink-0" />

@@ -75,10 +75,26 @@ export function Location() {
                       Contato Direto
                     </h4>
                     <p className="text-xs text-slate-200 mt-1">
-                      Telefone Fixo: {CLINIC_INFO.phone}
+                      Telefone Fixo:{" "}
+                      <a
+                        href={`tel:${CLINIC_INFO.phoneFormatted}`}
+                        className="text-gold-300 hover:text-gold-200 underline underline-offset-2 transition-colors font-medium"
+                        title="Ligar para Telefone Fixo"
+                      >
+                        {CLINIC_INFO.phone}
+                      </a>
                     </p>
-                    <p className="text-xs text-slate-200">
-                      WhatsApp: {CLINIC_INFO.whatsapp}
+                    <p className="text-xs text-slate-200 mt-1">
+                      WhatsApp:{" "}
+                      <a
+                        href={locationWaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition-colors font-medium"
+                        title="Abrir WhatsApp"
+                      >
+                        {CLINIC_INFO.whatsapp}
+                      </a>
                     </p>
                   </div>
                 </div>
