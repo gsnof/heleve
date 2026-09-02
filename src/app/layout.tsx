@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { CLINIC_INFO } from "@/data/clinicData";
+import { asset } from "@/lib/assets";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -47,9 +48,12 @@ export const metadata: Metadata = {
     address: true,
     email: false,
   },
-  metadataBase: new URL("https://heleveclinica.com.br"),
-  alternates: {
-    canonical: "/",
+  icons: {
+    icon: [
+      { url: asset("/images/logo-heleve.jpg"), type: "image/jpeg" },
+    ],
+    shortcut: asset("/images/logo-heleve.jpg"),
+    apple: asset("/images/logo-heleve.jpg"),
   },
   openGraph: {
     title: "Clínica Heleve | Implante Dentário, Ortodontia e Nutrologia Esportiva",
@@ -157,10 +161,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const iconUrl = asset("/images/logo-heleve.jpg");
+
   return (
     <html lang="pt-BR" className={`${cormorant.variable} ${plusJakarta.variable}`}>
       <head>
-        <link rel="icon" href="/images/logo-heleve.jpg" type="image/jpeg" />
+        <link rel="icon" href={iconUrl} type="image/jpeg" />
+        <link rel="shortcut icon" href={iconUrl} type="image/jpeg" />
+        <link rel="apple-touch-icon" href={iconUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
